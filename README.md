@@ -2,15 +2,15 @@
 
 基于Qt5，支持实时串口数据绘制，最多可同时绘制8条数据曲线
 
-![waveport](D:\Personal_Data\My_git_projects\serial_port_wave\pic\waveport.gif)
+[serial_waveport/pic/waveport.gif at main · tianhuaisen/serial_waveport (github.com)](https://github.com/tianhuaisen/serial_waveport/blob/main/pic/waveport.gif)
 
 ## 保存图片
 
-![2](D:\Personal_Data\My_git_projects\serial_port_wave\pic\2.png)
+[serial_waveport/pic/2.png at main · tianhuaisen/serial_waveport (github.com)](https://github.com/tianhuaisen/serial_waveport/blob/main/pic/2.png)
 
 ## 保存数据
 
-![1](D:\Personal_Data\My_git_projects\serial_port_wave\pic\1.png)
+[serial_waveport/pic/1.png at main · tianhuaisen/serial_waveport (github.com)](https://github.com/tianhuaisen/serial_waveport/blob/main/pic/1.png)
 
 ## 下位机发送数据格式
 
