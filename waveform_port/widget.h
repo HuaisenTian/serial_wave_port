@@ -40,7 +40,7 @@ public:
 private slots:
     // 主题和图表
     void updateUI();
-    void Chart_Init(int);
+    void Chart_Init();
     void Chart_Change(int);
 
     // 串口操作

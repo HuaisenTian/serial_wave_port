@@ -17,7 +17,7 @@ Widget::Widget(QWidget *parent) :
     ui->stopbox->setCurrentIndex(1);
     // 初始化QChart的实例
     chart = new QChart();
-    Chart_Init(1);
+    Chart_Init();
     serialPort = new QSerialPort(this);
 
     // 接收数据并处理的新线程
@@ -150,24 +150,8 @@ void Widget::updateUI()
     输   入：无
     输   出：无
 */
-void Widget::Chart_Init(int num)
+void Widget::Chart_Init()
 {
-    // 首先移除现有的所有曲线
-    for (auto *s : seriesList) {
-        chart->removeSeries(s);
-        delete s; // 删除曲线对象释放内存
-    }
-    seriesList.clear();
-
-
-    for (int i = 0; i < num; ++i) {
-        QSplineSeries *series = new QSplineSeries();
-        series->setName(QString("曲线 %1").arg(i + 1));
-        // 添加数据到曲线...
-        chart->addSeries(series);
-        seriesList.append(series);
-    }
-
     // 创建坐标轴
     axisX = new QValueAxis();
     chart->addAxis(axisX, Qt::AlignBottom);
@@ -178,6 +162,8 @@ void Widget::Chart_Init(int num)
     // 初始化坐标轴
     axisX->setRange(0, MAX_X);
     axisY->setRange(0, MAX_Y);
+
+    Chart_Change(1);
 
     // 把chart显示到窗口上
     ui->GraphicsView->setChart(chart);
